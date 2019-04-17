@@ -1,21 +1,21 @@
 package InnerClasses;
-import InnerClasses.Kişi.Çalışan;
+import InnerClasses.KiÅŸi.Ã‡alÄ±ÅŸan;
 	
-/* Burada da ınner class public tanımlandı ve dışarıda bir classdaki main ile onu kullanmaya başladım.
- * Bu da inner class ın bulunduğu yeri import etmem ile mümkün oldu. 
+/* Burada da inner class public tanÄ±mlandÄ± ve dÄ±ÅŸarÄ±da bir classdaki main ile onu kullanmaya baÅŸladÄ±m.
+ * Bu da inner class Ä±n bulunduÄŸu yeri import etmem ile mÃ¼mkÃ¼n oldu. 
  * */
 public class test {
 
 	public static void main(String[] args) {
-		Çalışan []staff=new Çalışan[3];
-		Kişi kisi=new Kişi("AsafKral");
-		staff[0]=kisi.new Çalışan(1000);
-		kisi=new Kişi("Aliye");
-		staff[1]=kisi.new Çalışan(564);
-		kisi=new Kişi("Alican");
-		staff[2]=kisi.new Çalışan(5456);
+		Ã‡alÄ±ÅŸan []staff=new Ã‡alÄ±ÅŸan[3];
+		KiÅŸi kisi=new KiÅŸi("AsafKral");
+		staff[0]=kisi.new Ã‡alÄ±ÅŸan(1000);
+		kisi=new KiÅŸi("Aliye");
+		staff[1]=kisi.new Ã‡alÄ±ÅŸan(564);
+		kisi=new KiÅŸi("Alican");
+		staff[2]=kisi.new Ã‡alÄ±ÅŸan(5456);
 		
-		for(Çalışan c:staff) {
+		for(Ã‡alÄ±ÅŸan c:staff) {
 			System.out.println(c);
 		}
 	}
