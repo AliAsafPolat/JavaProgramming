@@ -1,9 +1,9 @@
 package InnerClasses;
 
-public class Kişi {
+public class KiÅŸi {
 private String name;
 
-public Kişi(String name) {
+public KiÅŸi(String name) {
 	this.name = name;
 }
 
@@ -15,9 +15,9 @@ public void setName(String name) {
 	this.name = name;
 }
 
-public class Çalışan{
+public class Ã‡alÄ±ÅŸan{
 	private int salary;
-	public Çalışan(int maas) {
+	public Ã‡alÄ±ÅŸan(int maas) {
 		this.salary=maas;
 		
 	}
