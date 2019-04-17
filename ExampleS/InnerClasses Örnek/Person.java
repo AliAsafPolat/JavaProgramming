@@ -1,7 +1,7 @@
 package InnerClasses;
 
-/* Gizlenmiş bir inner classı başka bir yerde kullanamazsın sadece buradaki mainde kullanabilirsin.
- * Buradaki main method herhangi başka bir classa taşınamaz yani burada kullanılmalı.
+/* GizlenmiÅŸ bir inner classÄ± baÅŸka bir yerde kullanamazsÄ±n sadece buradaki mainde kullanabilirsin.
+ * Buradaki main method herhangi baÅŸka bir classa taÅŸÄ±namaz yani burada kullanÄ±lmalÄ±.
  * 
  * */
 
@@ -40,11 +40,11 @@ public static void main(String[] args) {
 	// TODO Auto-generated method stub
 	Employee []staff=new Employee[3];
 	Person kisi;
-	kisi=new Person("Osman Pamukoğlu");
+	kisi=new Person("Osman PamukoÄŸlu");
 	staff[0]=kisi.new Employee(10000);
-	kisi=new Person("Oktay Sinanoğlu");
+	kisi=new Person("Oktay SinanoÄŸlu");
 	staff[1]=kisi.new Employee(5000);
-	kisi=new Person("Asaf Adamoğlu");
+	kisi=new Person("Asaf AdamoÄŸlu");
 	staff[2]=kisi.new Employee(50000);
 	
 	for(Employee e:staff) {
