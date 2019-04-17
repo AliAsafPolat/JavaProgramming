@@ -3,10 +3,10 @@ package FileIO;
 import java.io.*;
 import java.util.LinkedList;
 
-/*Yazma işlemlerinde dikkat edeceğim bir husus şudur ki eğer yazacağım bir objenin içinde başka bir class a ait bir field var ise 
- * onun da serializable olması gereklidir.Serializeable yapmadıklarımı bastırmak zorundayım.
+/*Yazma iÅŸlemlerinde dikkat edeceÄŸim bir husus ÅŸudur ki eÄŸer yazacaÄŸÄ±m bir objenin iÃ§inde baÅŸka bir class a ait bir field var ise 
+ * onun da serializable olmasÄ± gereklidir.Serializeable yapmadÄ±klarÄ±mÄ± bastÄ±rmak zorundayÄ±m.
  * 
- * Okuma işlemlerinde ise hem input-output hem de typecasting için exception yazmam gerekir.
+ * Okuma iÅŸlemlerinde ise hem input-output hem de typecasting iÃ§in exception yazmam gerekir.
  * 
  * */
 
@@ -18,41 +18,41 @@ public class test {
 		Person p=new Person("AsafReis","1390106");
 		
 		try {
-			ObjectOutputStream writer=new ObjectOutputStream(new FileOutputStream(fileName,true));	//obje yazmak için stream açtık 
-			writer.writeObject(p);																	//yazma işlemini yaptık
+			ObjectOutputStream writer=new ObjectOutputStream(new FileOutputStream(fileName,true));	//Obje yazmak iÃ§in stream aÃ§tÄ±k 
+			writer.writeObject(p);									//Yazma iÅŸlemini yaptÄ±k
 			System.out.println("Operation successfully completed in "+fileName);
-			writer.close();																			//açtığım streamı kapatmalıyım.
+			writer.close();										//AÃ§tÄ±ÄŸÄ±m streamÄ± kapatmalÄ±yÄ±m.
 		}catch(IOException e) {
 			System.out.println("An exception detected while writing an object!");
 			e.printStackTrace();
 		}
-		Person kişi = null;
+		Person kiÅŸi = null;
 		try {
-			ObjectInputStream reader=new ObjectInputStream(new FileInputStream(fileName));			//Dosyadan obje okuyacağımı bildiriyorum.
-			kişi =(Person) reader.readObject();														//Okuma işlemini yapıyorum.
-			reader.close();																			//İşlem bittikten sonra streamı kapatmalıyım.				
+			ObjectInputStream reader=new ObjectInputStream(new FileInputStream(fileName));		//Dosyadan obje okuyacaÄŸÄ±mÄ± bildiriyorum.
+			kiÅŸi =(Person) reader.readObject();							//Okuma iÅŸlemini yapÄ±yorum.
+			reader.close();										//Ä°ÅŸlem bittikten sonra streamÄ± kapatmalÄ±yÄ±m.				
 		}catch(IOException e) {
-			System.out.println("An exception detected while reading an object!");					//Okuma işleminde iki tane exception kontrol yapmalıyım.
-			e.printStackTrace();																	//Birincisi IO diğeri ise typecasting için olmalı.
+			System.out.println("An exception detected while reading an object!");			//Okuma iÅŸleminde iki tane exception kontrol yapmalÄ±yÄ±m.
+			e.printStackTrace();									//Birincisi IO diÄŸeri ise typecasting iÃ§in olmalÄ±.
 		} catch (ClassNotFoundException e) {
 			System.out.println("An exception detected while typecasting!");
 			e.printStackTrace();
 		}
-		System.out.println(kişi.getName()+" "+kişi.getTc());										//Dosyadan aldığım bilgileri yazdırıyorum.
+		System.out.println(kiÅŸi.getName()+" "+kiÅŸi.getTc());						//Dosyadan aldÄ±ÄŸÄ±m bilgileri yazdÄ±rÄ±yorum.
 		
-	  LinkedList<Person> kişiler=new LinkedList<Person>();
+	  LinkedList<Person> kiÅŸiler=new LinkedList<Person>();
 	  Person p1=new Person("ali","321321");
 	  Person p2=new Person("alim","32d3t1");
 	  Person p3=new Person("aliye","3s13e1");
 	  Person p4=new Person("aliko","3a1f21");
-	  kişiler.add(p4);
-	  kişiler.add(p3);
-	  kişiler.add(p2);
-	  kişiler.add(p1);
+	  kiÅŸiler.add(p4);
+	  kiÅŸiler.add(p3);
+	  kiÅŸiler.add(p2);
+	  kiÅŸiler.add(p1);
 	  
 	  try {
 		  ObjectOutputStream writer=new ObjectOutputStream(new FileOutputStream(fileName));
-		  writer.writeObject(kişiler);
+		  writer.writeObject(kiÅŸiler);
 		  System.out.println("LinkedList is successfully written to file!");
 		  writer.close();
 	  }catch(IOException e) {
