@@ -1,2 +1,3 @@
-# Java-Kodlama
-Bu repoda kendimi geliştirmek amacı ile yazdığım Java kodları bulunmaktadır. Javanın temel yapısı ve nesneye yönelik programlamanın temelleri atılmıştır.
+# Java Programming 
+
+This repo includes the code parts that help me to learn how to program Java.
